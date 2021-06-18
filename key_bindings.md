@@ -6,6 +6,6 @@
 |Left arrow|Go back. (Equivalent of `cd ..`)|
 |Up arrow| Scroll Up |
 |Down arrow| Scroll down |
-|`Ctrl-q`; `Shift-q`; `Ctrl-c`|Quit the application|
+|`Ctrl-q`; `Ctrl-c`|Quit the application|
 |Just type| Fuzzy Finding(fzf)|
 |Space|Highlight|

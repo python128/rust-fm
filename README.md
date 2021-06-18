@@ -38,7 +38,7 @@ At the top of the buffer, it shows the path, therefore being able to see where y
 ## Changes from Schmiddiii/rust-fm
 * Changed the colorscheme. In Schmiddiii/rust-fm, files(selected) are shown as white on white. Thus, we can't see it. Now Changed to Black on white.
 * Changed the keybindings, as it would be complicated to type Uppercase/Capital letters to move around. 
-* Quitting by Ctrl-c or Shift-Q or Ctrl-q.
+* Quitting by Ctrl-c  or Ctrl-q.
 
 ## Requirements
 * xdg-open
