@@ -14,7 +14,7 @@ pub fn std_theme(
         ((EntryType::Directory, false), false) => (&termion::color::Blue, &termion::color::Reset),
         ((EntryType::Directory, false), true) => (&termion::color::Reset, &termion::color::Blue),
         ((EntryType::File, false), false) => (&termion::color::Reset, &termion::color::Reset),
-        ((EntryType::File, false), true) => (&termion::color::Reset, &termion::color::White),
+        ((EntryType::File, false), true) => (&termion::color::Black, &termion::color::White),
     }
 }
 

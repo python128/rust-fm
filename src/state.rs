@@ -44,13 +44,13 @@ impl<'a, W: Write> FmState<'a, W> {
     /// Handles a key press
     pub fn handle_key(&mut self, key: termion::event::Key) {
         match key {
-            termion::event::Key::Char('J') => self.main_rect_list.next(),
-            termion::event::Key::Char('K') => self.main_rect_list.prev(),
-            termion::event::Key::Char('H') => {
+            termion::event::Key::Down => self.main_rect_list.next(),
+            termion::event::Key::Up => self.main_rect_list.prev(),
+            termion::event::Key::Left => {
                 self.fzf = None;
                 self.go_to_parent();
             }
-            termion::event::Key::Char('L') | termion::event::Key::Char('\n') => {
+            termion::event::Key::Right | termion::event::Key::Char('\n') => {
                 self.fzf = None;
                 self.open();
             }
