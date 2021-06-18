@@ -12,7 +12,7 @@ pub fn start_loop<W: Write>(state: &mut FmState<W>) {
         state.show();
         let key = stdin().keys().next().unwrap().unwrap();
         match key {
-            termion::event::Key::Ctrl('c') => break,
+            termion::event::Key::Ctrl('c') | termion::event::Key::Ctrl('q') | termion::event::Key::Shift('q') => break,
             _ => state.handle_key(key),
         }
     }
