@@ -1,9 +1,6 @@
 # Key Bindings
 
 |Key|Action|
-
-|---|------|
-
 |Right arrow/Enter|[On dir] Go to dir. [On file] Open file.|
 |-----------|----------------------------------------|
 |Left arrow|Go back. (Equivalent of `cd ..`)|
