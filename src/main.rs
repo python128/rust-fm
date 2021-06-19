@@ -1,6 +1,3 @@
-extern crate boxion;
-extern crate termion;
-
 mod filemanager;
 mod fmloop;
 mod fzf;
@@ -27,11 +24,11 @@ const PATH_RECT_NAME: &str = "path_layout";
 const PREVIEW_RECT_NAME: &str = "preview_layout";
 const MAIN_RECT_NAME: &str = "main_layout";
 
-/// Programm start
+/// Program start
 fn main() {
     let screen = AlternateScreen::from(stdout().into_raw_mode().unwrap());
 
-    let path_layout = layout::Layout::new_str(PATH_RECT_NAME);
+    let path_layout = layout::Layout::new_border_str(PATH_RECT_NAME, border::LINED);
     let preview_layout = layout::Layout::new_border_str(PREVIEW_RECT_NAME, border::LINED);
     let main_layout = layout::Layout::new_border_str(MAIN_RECT_NAME, border::LINED);
 

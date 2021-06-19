@@ -78,7 +78,7 @@ impl FileManager {
         Command::new("cp").args::<Vec<&str>, &str>(self.yanked.as_ref().unwrap().clone().iter().map(|p| (*p).to_str().unwrap()).collect()).arg(self.get_path_string()).status().expect("Copy failed to run");
 
     }
-
+	
     /// Opens a children by cd into directories, using $EDITOR or by xdg-open
     pub fn open_child(&mut self, stdout: &mut dyn io::Write, dir: &str) {
         let self_clone = self.clone();

@@ -1,6 +1,8 @@
 use std::fs::File;
 use std::io::{BufReader, Read, Write};
 
+
+
 use crate::filemanager::{EntryType, FileManager};
 use crate::fzf::Fzf;
 
@@ -40,8 +42,13 @@ impl<'a, W: Write> FmState<'a, W> {
             .write_trimmed(&mut self.stdout, &self.fm.get_path_string(), 0, 0)
             .unwrap();
     }
+    
+	// pub fn create_file(&mut self, file_name: String) {
+	//     std::fs::File::create(&file_name).expect("LOL");
+	//     self.reload()
+	// }
 
-    /// Handles a key press
+	/// Handles a key press
     pub fn handle_key(&mut self, key: termion::event::Key) {
         match key {
             termion::event::Key::Down => self.main_rect_list.next(),
@@ -61,6 +68,7 @@ impl<'a, W: Write> FmState<'a, W> {
             termion::event::Key::Char(' ') => {
                 self.highlight_selected();
             }
+            
             termion::event::Key::Char('Y') => {
                 self.fm.yank();
             }
